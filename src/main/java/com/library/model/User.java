@@ -7,6 +7,7 @@ public class User {
     private int id;          // 用户ID
     private String username; // 用户名
     private String password; // 密码
+    private String role;     // 用户角色
 
     /**
      * 默认构造函数
@@ -23,6 +24,19 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+    
+    /**
+     * 带全部参数的构造函数
+     * 
+     * @param username 用户名
+     * @param password 密码
+     * @param role 用户角色
+     */
+    public User(String username, String password, String role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
     }
 
     /**
@@ -77,5 +91,23 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    /**
+     * 获取用户角色
+     * 
+     * @return 用户角色
+     */
+    public String getRole() {
+        return role;
+    }
+
+    /**
+     * 设置用户角色
+     * 
+     * @param role 用户角色
+     */
+    public void setRole(String role) {
+        this.role = role;
     }
 } 

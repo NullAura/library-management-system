@@ -21,7 +21,7 @@ public class UserDao {
      */
     public User login(Connection connection, User user) throws Exception {
         User resultUser = null;
-        String sql = "SELECT * FROM lmbuser WHERE username = ? AND password = ?";
+        String sql = "SELECT * FROM t_user WHERE username = ? AND password = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setString(1, user.getUsername());
         pstmt.setString(2, user.getPassword());
@@ -32,6 +32,7 @@ public class UserDao {
             resultUser.setId(rs.getInt("id"));
             resultUser.setUsername(rs.getString("username"));
             resultUser.setPassword(rs.getString("password"));
+            resultUser.setRole(rs.getString("role"));
         }
         
         rs.close();

@@ -109,7 +109,7 @@ public class LoginView extends JFrame {
         resetButton.setFont(new Font("微软雅黑", Font.BOLD, 14));
         
         loginButton.setBackground(new Color(70, 130, 180));
-        loginButton.setForeground(Color.WHITE);
+        loginButton.setForeground(Color.BLACK);
         loginButton.setPreferredSize(new Dimension(100, 35));
         
         resetButton.setBackground(new Color(220, 220, 220));

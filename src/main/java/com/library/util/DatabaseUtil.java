@@ -7,9 +7,9 @@ import java.sql.DriverManager;
  * 数据库工具类
  */
 public class DatabaseUtil {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/db_librarymanagementsystem";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/db_librarymanagementsystem?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8";
     private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "123456";
+    private static final String DB_PASSWORD = "nullaura"; // 如果您的MySQL root用户没有密码，请留空
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 
     /**
